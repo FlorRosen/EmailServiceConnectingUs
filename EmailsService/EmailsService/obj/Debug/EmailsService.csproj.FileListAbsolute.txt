@@ -1,0 +1,15 @@
+/Users/florenciarosental/Projects/EmailsService/EmailsService/obj/Debug/EmailsService.csprojAssemblyReference.cache
+/Users/florenciarosental/Projects/EmailsService/EmailsService/obj/Debug/EmailsService.csproj.CoreCompileInputs.cache
+/Users/florenciarosental/Projects/EmailsService/EmailsService/bin/EmailsService.dll
+/Users/florenciarosental/Projects/EmailsService/EmailsService/bin/EmailsService.pdb
+/Users/florenciarosental/Projects/EmailsService/EmailsService/bin/Newtonsoft.Json.dll
+/Users/florenciarosental/Projects/EmailsService/EmailsService/bin/System.Net.Http.Formatting.dll
+/Users/florenciarosental/Projects/EmailsService/EmailsService/bin/System.Web.Http.dll
+/Users/florenciarosental/Projects/EmailsService/EmailsService/bin/System.Web.Http.WebHost.dll
+/Users/florenciarosental/Projects/EmailsService/EmailsService/bin/System.Net.Http.Formatting.xml
+/Users/florenciarosental/Projects/EmailsService/EmailsService/bin/System.Web.Http.xml
+/Users/florenciarosental/Projects/EmailsService/EmailsService/bin/System.Web.Http.WebHost.xml
+/Users/florenciarosental/Projects/EmailsService/EmailsService/bin/Newtonsoft.Json.xml
+/Users/florenciarosental/Projects/EmailsService/EmailsService/obj/Debug/EmailsService.csproj.CopyComplete
+/Users/florenciarosental/Projects/EmailsService/EmailsService/obj/Debug/EmailsService.dll
+/Users/florenciarosental/Projects/EmailsService/EmailsService/obj/Debug/EmailsService.pdb
