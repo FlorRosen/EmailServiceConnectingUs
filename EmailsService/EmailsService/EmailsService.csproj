@@ -57,6 +57,7 @@
     <Content Include="Web.config" />
     <Content Include="Global.asax" />
     <Content Include="packages.config" />
+    <Content Include="Index.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
