@@ -2,23 +2,21 @@
 using System.Net.Mail;
 using System.Web.Http;
 using EmailsService.Models;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Mail;
+using System.Net.Mime;
+using System.Web;
+
 
 namespace EmailsService
 {
     public class EmailsController: ApiController
     {
-        [Route("api/chats/messages")]
+        [Route("api/email")]
         [HttpPost]
-        public IHttpActionResult Post([FromBody] Message message)
+        public IHttpActionResult Post([FromBody] EmailViewModel email)
         {
-            
-            EmailViewModel email = new EmailViewModel();
-            email.SubjectText = "New Message";
-            email.BodyText = "You have received a new message! Go check ConnectingUs right now!";
-            //email.ServiceTitle = chatsRepository.GetChat(message.IdChat).Service.Title;
-            email.UserSenderMail = "flopirosental@hotmail.com";
-            email.UserReceiverMail = "flopirosental@hotmail.com";
-            
             try
             {
                 EmailsService.SendEmailViaWebApi(email);
@@ -27,7 +25,7 @@ namespace EmailsService
             {
                 throw new SmtpFailedRecipientException("Failed while sending the email");
             }
-
+           
             return (IHttpActionResult)Ok();
 
         }

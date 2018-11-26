@@ -1,20 +1,20 @@
 ﻿<Properties StartupConfiguration="{D1F63F74-829B-441D-A16D-B18DD58A52D0}|">
   <MonoDevelop.Ide.ItemProperties.EmailsService.Tests FirstBuild="True" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="EmailsService/Index.html">
+  <MonoDevelop.Ide.Workbench ActiveDocument="EmailsService/Services/EmailsService.cs">
     <Files>
-      <File FileName="EmailsService/Controllers/EmailsController.cs" Line="24" Column="40" />
-      <File FileName="EmailsService/Models/EmailViewModel.cs" Line="9" Column="17" />
-      <File FileName="EmailsService/Models/Message.cs" Line="4" Column="18" />
-      <File FileName="EmailsService/Services/EmailsService.cs" Line="26" Column="41" />
-      <File FileName="EmailsService/Index.html" Line="1" Column="1" />
+      <File FileName="EmailsService/Controllers/EmailsController.cs" Line="22" Column="45" />
+      <File FileName="EmailsService/Models/EmailViewModel.cs" Line="4" Column="18" />
+      <File FileName="EmailsService/Services/EmailsService.cs" Line="14" Column="105" />
+      <File FileName="EmailsService/Web.config" Line="23" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.EmailsService PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/florenciarosental/Documents/GitHub/EmailServiceConnectingUs/EmailsService/EmailsService/Controllers/EmailsController.cs" relfile="EmailsService/Controllers/EmailsController.cs" line="15" column="1" />
-      <Breakpoint file="/Users/florenciarosental/Documents/GitHub/EmailServiceConnectingUs/EmailsService/EmailsService/Controllers/EmailsController.cs" relfile="EmailsService/Controllers/EmailsController.cs" line="28" column="1" />
+      <Breakpoint file="/Users/florenciarosental/Documents/EmailServiceConnectingUs/EmailsService/EmailsService/Controllers/EmailsController.cs" relfile="EmailsService/Controllers/EmailsController.cs" line="26" column="1" />
+      <Breakpoint file="/Users/florenciarosental/Documents/EmailServiceConnectingUs/EmailsService/EmailsService/Services/EmailsService.cs" relfile="EmailsService/Services/EmailsService.cs" line="44" column="1" />
+      <Breakpoint file="/Users/florenciarosental/Documents/EmailServiceConnectingUs/EmailsService/EmailsService/Services/EmailsService.cs" relfile="EmailsService/Services/EmailsService.cs" line="52" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net.Mail;
 using EmailsService.Models;
+using System.Net.Mime;
 
 namespace EmailsService
 {
@@ -8,26 +9,33 @@ namespace EmailsService
     {
         public static void SendEmailViaWebApi(EmailViewModel email)
         {
-            string subject = "[Connecting-Us] " + email.SubjectText;
-            string body = "Hey " + email.UserSenderMail + "!\n" + email.BodyText;
-            string fromMail = "connecting.us2018@gmail.com";
-            string emailTo = email.UserReceiverMail;
+            try
+            {
+                var body = "Hey " + email.UserReceiverNickname + "! \n " + email.UserSenderNickname + " has sent you a message! Go check it out in Connecting Us web.";
 
-            MailMessage mail = new MailMessage();
-            SmtpClient smtpServer = new SmtpClient("smtp.gmail.com");
-            mail.From = new MailAddress(fromMail);
-            mail.To.Add(emailTo);
-            mail.Subject = subject;
-            mail.Body = body;
+                MailMessage mailMsg = new MailMessage();
 
-            // var smtpSection = (SmtpSection)ConfigurationManager.GetSection("system.net/mailSettings/smtp");
-            smtpServer.Port = 587;
-            smtpServer.Credentials = new System.Net.NetworkCredential("connecting.us2018@gmail.com", "Ort123456");
-            smtpServer.EnableSsl = true;
-            //smtpServer.UseDefaultCredentials = true;
-            smtpServer.Send(mail);
+                // To
+                mailMsg.To.Add(new MailAddress(email.UserReceiverMail));
 
+                // From
+                mailMsg.From = new MailAddress("connecting.us2018@gmail.com", "Connecting Us");
 
+                // Subject and multipart/alternative Body
+                mailMsg.Subject = "[Connecting-Us] New message from " + email.UserSenderNickname;
+                string text = body;
+                string html = body;
+                mailMsg.AlternateViews.Add(AlternateView.CreateAlternateViewFromString(text, null, MediaTypeNames.Text.Plain));
+                mailMsg.AlternateViews.Add(AlternateView.CreateAlternateViewFromString(html, null, MediaTypeNames.Text.Html));
+
+                SmtpClient smtpClient = new SmtpClient("smtp.sendgrid.net", Convert.ToInt32(587));
+
+                smtpClient.Send(mailMsg);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
 
         }
     }
